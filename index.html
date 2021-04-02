@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+   href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+   rel="stylesheet"
+  />
+
+  <link
+   rel="stylesheet"
+   href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""
+  />
+  <script
+   defer
+   src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""
+  ></script>
+
+  <link rel="stylesheet" href="/css/main.css" />
+  <title>IP Location Tracker</title>
+
+  <script defer src="/app/js/script.js"></script>
+ </head>
+ <body>
+  <div class="search">
+   <div class="search__container">
+    <h1 class="search__heading">IP Address Tracker</h1>
+
+    <div class="search__search--bar">
+     <form action="#" class="search__search--field container-mobile">
+      <input
+       type="text"
+       name="search-input"
+       id="search-input"
+       class="search__input"
+       placeholder="Search for any IP address or domain"
+      />
+      <button class="search__button" aria-label="Submit search">
+       <img src="/images/icon-arrow.svg" alt="search icon" />
+      </button>
+     </form>
+    </div>
+
+    <div class="search__display flex-jc container-mobile">
+     <ul class="search__display--list">
+      <li class="search__display--item">
+       <label class="search__display--label">Ip address</label>
+       <span class="search__display--data" id="ip-address">098987876876</span>
+      </li>
+      <li class="search__display--item">
+       <label class="search__display--label">Location</label>
+       <span class="search__display--data" id="location">Edinburgh</span>
+      </li>
+      <li class="search__display--item">
+       <label class="search__display--label">Timezone</label>
+       <span class="search__display--data" id="timezone">GMT</span>
+      </li>
+      <li class="search__display--item">
+       <label class="search__display--label">Isp</label>
+       <span class="search__display--data" id="isp">Webernet</span>
+      </li>
+     </ul>
+    </div>
+   </div>
+  </div>
+
+  <div id="mapid"></div>
+ </body>
+</html>
