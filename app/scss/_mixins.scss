@@ -1,0 +1,33 @@
+
+// Breakpoints
+
+$breakpoints-up: (
+ 'medium': '48em',
+ 'large': '64em',
+ 'xlarge': '75em',
+ 'xxlarge': '93em',
+);
+
+$breakpoints-down: (
+ 'medium': '47.9375em',
+ 'large': '63.9375em',
+ 'xlarge': '74.9375em',
+);
+
+@mixin breakpoint-up($size) {
+ @media (min-width: map-get($breakpoints-up, $size)) {
+  @content;
+ }
+}
+
+@mixin breakpoint-down($size) {
+ @media (max-width: map-get($breakpoints-down, $size)) {
+  @content;
+ }
+}
+
+// Button Hover
+
+@mixin hover($speed) {
+ transition: all 150ms ease-in-out;
+}
