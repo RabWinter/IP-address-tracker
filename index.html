@@ -26,9 +26,19 @@
   <link rel="stylesheet" href="/css/main.css" />
   <title>IP Location Tracker</title>
 
-  <script defer src="/app/js/script.js"></script>
+  <script
+   defer
+   crossorigin="anonymous"
+   src="/app/js/script.js"
+   type="module"
+  ></script>
  </head>
  <body>
+  <div class="overlay has-fade"></div>
+  <div class="error has-fade" id="error">
+   <div class="btn-close" id="close__error--btn">X</div>
+   <p class="error__message" id="error__message"></p>
+  </div>
   <div class="search">
    <div class="search__container">
     <h1 class="search__heading">IP Address Tracker</h1>
@@ -52,19 +62,19 @@
      <ul class="search__display--list">
       <li class="search__display--item">
        <label class="search__display--label">Ip address</label>
-       <span class="search__display--data" id="ip-address">098987876876</span>
+       <span class="search__display--data" id="ip-address">Loading</span>
       </li>
       <li class="search__display--item">
        <label class="search__display--label">Location</label>
-       <span class="search__display--data" id="location">Edinburgh</span>
+       <span class="search__display--data" id="location">Loading</span>
       </li>
       <li class="search__display--item">
        <label class="search__display--label">Timezone</label>
-       <span class="search__display--data" id="timezone">GMT</span>
+       <span class="search__display--data" id="timezone">Loading</span>
       </li>
       <li class="search__display--item">
        <label class="search__display--label">Isp</label>
-       <span class="search__display--data" id="isp">Webernet</span>
+       <span class="search__display--data" id="isp">Loading</span>
       </li>
      </ul>
     </div>
@@ -74,3 +84,4 @@
   <div id="mapid"></div>
  </body>
 </html>
+
